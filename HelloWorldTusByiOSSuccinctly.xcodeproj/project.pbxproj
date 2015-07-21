@@ -416,6 +416,7 @@
 				421241901B5EC3E500E1E1D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		421241911B5EC3E500E1E1D3 /* Build configuration list for PBXNativeTarget "HelloWorldTusByiOSSuccinctlyTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +425,7 @@
 				421241931B5EC3E500E1E1D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

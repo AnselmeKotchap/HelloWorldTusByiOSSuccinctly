@@ -10,6 +10,10 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 
+@property (weak, nonatomic) IBOutlet UILabel *messageLabel;
+
+-(IBAction)sayGoodbye:(id)sender;
 @end
 
