@@ -17,6 +17,7 @@
 @synthesize messageLabel = _messageLabel;
 @synthesize nameField = _nameField;
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -30,14 +31,34 @@
 
 //sayhello method
 -(void)sayHello:(id)sender{
-    _messageLabel.text = @"Hello, World!";
+    
+    //in case there is no input from user
+    if ([self.name length] == 0) {
+        self.name = @"World";
+    }
+    _messageLabel.text = [NSString stringWithFormat:@"Hello, %@!", self.name];
     _messageLabel.textColor = [UIColor colorWithRed:0.0 green:0.3 blue:1.0 alpha:1.0];
 }
 
 //sayhello method
 -(void)sayGoodbye:(id)sender{
-    _messageLabel.text = @"See you Later";
+    
+    //In case there is no input from user
+    if ([self.name length] == 0) {
+        self.name = @"World";
+    }
+    _messageLabel.text = [NSString stringWithFormat:@"See you later, %@!",self.name];
     _messageLabel.textColor = [UIColor colorWithRed:1.0 green:0.0 blue:0.0 alpha:1.0];
+}
+
+//handling UITextFieldDelegate
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    self.name = textField.text;
+    if (textField == self.nameField) {
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning {

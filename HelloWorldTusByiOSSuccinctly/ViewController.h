@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
-
+@property (weak, nonatomic) NSString *name;
 @property (weak, nonatomic) IBOutlet UILabel *messageLabel;
 
 -(IBAction)sayGoodbye:(id)sender;
